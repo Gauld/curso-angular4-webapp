@@ -1,0 +1,18 @@
+<p>productos-list works!</p>
+<li *ngFor="let producto of productos; index as i; first as isFirst">
+  {{i}}/id:{{producto.id}}, nombre:{{producto.nombre}},descripcion:{{producto.descripcion}},precio: {{producto.precio}}  <span *ngIf="isFirst">default</span>
+<br>
+<p>{{url}}{{producto.imagen}}</p>
+  <img src="{{url}}{{producto.imagen}}" />
+  <br>
+  <strong>{{producto.nombre}}</strong>
+  <br>
+  <p>{{producto.precio}}</p>
+  <br>
+  <a [routerLink]="['/detallesProducto',producto.id]">ver detalles</a> 
+  <br>
+   <a [routerLink]="['/editarProducto',producto.id]">editar</a>
+   <br>
+   <button  (click)="onDeleteProducto(producto.id)">borrar</button>
+  </li>
+
