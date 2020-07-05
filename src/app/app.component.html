@@ -1,74 +1,71 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
+  <head> </head>
 
-</head>
-
-<script type ="text/javascript" src="../assets/jquery.min.js"></script>
-<!--<link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css"/>-->
-<script type ="text/javascript" src="../assets/bootstrap/js/bootstrap.min.js"></script>
-<style>
-    #nav ul{
-        list-style: none;
+  <script type="text/javascript" src="../assets/jquery.min.js"></script>
+  <!--<link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css"/>-->
+  <script
+    type="text/javascript"
+    src="../assets/bootstrap/js/bootstrap.min.js"
+  ></script>
+  <style>
+    #nav ul {
+      list-style: none;
     }
 
-    #nav ul li{
-        float:left;
-        margin: 10px;
+    #nav ul li {
+      float: left;
+      margin: 10px;
     }
 
-    .activado{
-
-        background: red;
+    .activado {
+      background: red;
     }
-</style>
-<body>
+  </style>
+  <body>
+    <div id="content" class="col-lg-10 offset-2">
+      <header id="header" class="col-lg-12" [style.background]="header_color">
+        <h1>
+          {{ title }}
+        </h1>
+      </header>
 
-
-<div id="content" class="col-lg-10 offset-2">
-<header id="header" class="col-lg-12" [style.background]="header_color"> 
-    <h1>
-        {{title}}
-    </h1>
-</header>
-
-<nav id="nav" class="col-lg-12" >
-    <ul>
-        <li>
-            <a [routerLink]="['/home']"[routerLinkActive]="['activado']"> Home</a>
-        </li>
-        
-        <li>
-            <a [routerLink]="['/listaProductos']"[routerLinkActive]="['activado']"> Productos</a>
-        </li>
-        <li>
-            <a [routerLink]="['/crearProducto']"[routerLinkActive]="['activado']"> Crear Producto</a>
-        </li>
-        <li>
-            <a [routerLink]="['/angular']"[routerLinkActive]="['activado']"> Angular</a>
-        </li>
-    </ul>
-</nav>
-<br>
-<section id="main" class="col-lg-10 col-lg-offset-2">
-
-<router-outlet></router-outlet>
-</section>
-<footer>
-    <p>
-        Curso de angular 4
-    </p>
-</footer>
-</div>
-
-</body>
-
+      <nav id="nav" class="col-lg-12">
+        <ul>
+          <li>
+            <a [routerLink]="['/home']" [routerLinkActive]="['activado']">Home</a>
+          </li>
+          <li>
+            <a [routerLink]="['/listaProductos']" [routerLinkActive]="['activado']">Productos</a>
+          </li>
+          <li>
+            <a
+              [routerLink]="['/crearProducto']"
+              [routerLinkActive]="['activado']"
+            >
+              Crear Producto</a
+            >
+          </li>
+          <li>
+            <a [routerLink]="['/angular']" [routerLinkActive]="['activado']">
+              Angular</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <br />
+      <section id="main" class="col-lg-10 col-lg-offset-2">
+        <router-outlet></router-outlet>
+      </section>
+      <footer>
+        <p>
+          Curso de angular 4
+        </p>
+      </footer>
+    </div>
+  </body>
 </html>
 
-
-
-
-<!-- Componente Actual 
+<!-- Componente Actual
 <app-basic-angular></app-basic-angular>
 -->

@@ -1,4 +1,4 @@
-export var GLOBAL ={
-url:'http://localhost/cursoAngular4-backend/index.php/',
-header_color:'green'
-}
+export const GLOBAL = {
+  url: 'http://localhost/cursoAngular4-backend/index.php/',
+  header_color: 'green',
+};

@@ -11,8 +11,8 @@
 <!--form class="lg-6"-->
 <form #formProducto="ngForm" (ngSubmit)="onSubmit()" class="lg-6" id="form-producto">
 
-<label>Nombre</label> 
-<input type="text" #nombre="ngModel" name="nombre" [(ngModel)]="producto.nombre" class="from-control" required/> 
+<label>Nombre</label>
+<input type="text" #nombre="ngModel" name="nombre" [(ngModel)]="producto.nombre" class="from-control" required/>
 <span *ngIf="!nombre.valid&&nombre.touched" class="label label-danger">Nombre obligatorio</span>
 <br>
 <label>Descripcion</label>

@@ -29,7 +29,7 @@ import { ProductoEditComponent } from './producto-edit/producto-edit.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,//new
+    HttpClientModule, // new
     FormsModule
   ],
   providers: [],
